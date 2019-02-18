@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+.container {
+	background-color : white;
+	padding : 1%;
+	width : auto;
+	height : auto;
+	
+}
+
+.box {
+	width : 100%;	
+	text-align : center; 
+	display : block;
+}
+
+.linkBox {
+	position : relative;
+	/* width : 40%; */
+	float : left;
+}
+
+.linkText {
+	font-weight : bold;
+	font-size : 15px;
+}
+
+#paging li {
+	
+	display : none;
+
+}
+
+#btn {
+	float : right;
+}
+
+// Small devices (landscape phones, 576px 이상)
+@media (min-width: 576px) { 
+	.container {
+		width : 100%;
+	}
+}
+
+// Medium devices (tablets, 768px 이상)
+@media (min-width: 768px) {  
+
+}
+
+// Large devices (desktops, 992px 이상)
+@media (min-width: 992px) {
+
+}
+
+// Extra large devices (large desktops, 1200px 이상)
+@media (min-width: 1200px) { 
+
+}

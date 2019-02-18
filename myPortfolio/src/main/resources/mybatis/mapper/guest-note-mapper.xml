@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+  <mapper namespace="guestNoteMapper">
+  
+  	<resultMap id="note" type="note">
+		<result property="noteNo" 			column="NOTE_NO"			/>	
+		<result property="upperNoteNo" 		column="UPPER_NOTE_NO"		/>
+		<result property="title" 			column="TITLE"				/>
+		<result property="contents" 		column="CONTENTS"			/>
+		<result property="writer" 			column="WRTIER"				/>	
+		<result property="pwd" 				column="PWD"				/>
+		<result property="updDt"			column="UPD_DT"				/>
+  	</resultMap>
+
+	
+  	<select id="getTotalNoteCnt" resultType="java.lang.Integer">
+		/*HomeDao_getTotalNoteCnt*/
+		SELECT COUNT(*)
+		  FROM portfolio.NOTE
+	</select>
+	
+	<select id="getNoteList" parameterType="paging" resultMap="note">
+		/*HomeDao_getNoteList*/
+		SELECT @ROWNUM:= @ROWNUM + 1 AS ROWNUM,
+               TB.*
+   		  FROM (
+			    SELECT NOTE_NO
+                      ,UPPER_NOTE_NO
+                      ,TITLE
+                      ,CONTENTS
+                      ,WRITER
+                      ,DATE_FORMAT(UPD_DT, '%Y-%m-%d') AS UPD_DT
+				  FROM portfolio.NOTE
+				 WHERE 1 = 1
+                 ORDER BY NOTE_NO ASC
+			   ) AS TB
+			  ,(
+                SELECT @ROWNUM := 0
+               ) AS ROW
+         LIMIT #{firstNote}, #{lastNote} 
+	</select>
+	
+  	
+  	<insert id="insertGuestNote" parameterType="note">
+		<selectKey keyProperty="noteNo" resultType="string" order="BEFORE">
+    		SELECT LPAD(MAX(NOTE_NO) + 1, 5, '0') 
+			  FROM portfolio.NOTE
+  		</selectKey>
+		/*HomeDao_insertGuestNote*/
+		INSERT INTO portfolio.NOTE
+		VALUES
+		(
+			#{noteNo}
+		   ,NULL
+		   ,#{title}
+		   ,#{contents}
+		   ,#{writer}
+		   ,#{pwd}
+		   ,SYSDATE()
+		   ,SYSDATE()
+		)
+	</insert>
+	
+<!-- 
+
+	<select id="adminLogin" parameterType="appVoca" resultType="java.lang.String">
+
+	
+
+	</select>
+	
+	
+
+	
+	<select id="chkRegDomain" parameterType="java.lang.String" resultType="java.lang.Integer">
+		/*AppStdDao_chkRegDomain*/
+		SELECT COUNT(*)
+		  FROM APP_STD_DOMAIN
+		 WHERE 1=1
+		   AND "DOMAIN" = #{domain}
+	</select>
+
+	<insert id="saveNewDomain" parameterType="appDomain">
+		/*AppStdDao_saveNewDomain*/
+		INSERT INTO APP_STD_DOMAIN
+		VALUES
+		(
+			#{domain}
+		   ,#{dgName}
+		   ,#{iName}
+		   ,#{dType}
+		   ,#{dLength}
+		   ,#{dDef}
+		   ,#{dAppStts}
+		   ,NOW()
+		)
+	</insert>
+
+ -->  </mapper>

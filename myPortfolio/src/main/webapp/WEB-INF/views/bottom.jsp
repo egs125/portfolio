@@ -4,42 +4,30 @@
 <html lang="ko">
 <head>
 
-	<title>Home</title>
+	<title>Footer</title>
 	
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+	<!-- jQuery -->
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script
+
+	<!-- Bootstrap -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>	
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
-	
-  	<script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
-  
-	<script src="/resources/js/common.js"></script>
-	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  	
 	<link rel="stylesheet" href="/resources/css/layout.css">
 	
-	<script type="text/javascript">
-		
-		$(document).ready(function(){
-			
-			
-			$("li").on("click", function(){
-				
-				$("li").removeClass("active");
-				$(this).addClass("active");
-				var a = $(this).find("a").attr("href");
-				
-			});
-			
-		});
-	
-	</script>
 </head>
 <body>
-
-	<h3>Dorong dog foot</h3> 
+	
+	<footer class="footer">
+		<div class="container">
+			<p class="text-muted">Photo by David Rodrigo on Unsplash</p>
+		</div>
+	</footer>
 	
 </body>
 </html>

@@ -41,7 +41,7 @@
 			
 			<ul>
 				<li>Windows 10 64bit + Eclipse Oxygen</li>		
-				<li>JDK </li>
+				<li>JDK 1.8.0 </li>
 				<li>Maven 2.5.1</li>
 				<li>Git</li>
 				<li>Spring framework 3.1.1</li>

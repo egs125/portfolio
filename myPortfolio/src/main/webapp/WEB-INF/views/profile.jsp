@@ -10,7 +10,7 @@
 	<title>Dorong's Portfolio</title>
 	
 	<!-- jQuery -->
-    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
@@ -30,13 +30,17 @@
 	<div class="container">
 				
 		<div class="jumbotron">			
-			<h2 class="display-3">KOEUN SEO</h2>			
-			<p class="lead">JAVA WEB DEVELOPER</p>
-			<hr class="my-4">
-			<p>since 2016</p>			
+			<h2 class="display-3">PROFILE</h2>		
 		</div>
 		
-		<div class="contents">			
+		<div class="contents">
+		
+			<div class="page-header">
+				<h1>KOEUN SEO</h1>	
+			</div>
+			<p class="lead">JAVA WEB DEVELOPER &nbsp;&nbsp;<span class="text-muted">since 2016</span></p>
+			
+			<br>
 			<h3>CONTACT</h3>
 			<ul>
 				<li>
@@ -87,7 +91,6 @@
 	
 	</div>
 	<!-- //end of container -->
-	
-	<jsp:include page="bottom.jsp" />
+
 </body>
 </html>

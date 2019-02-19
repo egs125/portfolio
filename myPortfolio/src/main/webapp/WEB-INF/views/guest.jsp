@@ -68,8 +68,8 @@
 	</div>
 	<!-- //end of container -->
 	
-	<input type="text" id="curBlock"/>
-	<input type="text" id="curPage"/> 
+	<input type="hidden" id="curBlock"/>
+	<input type="hidden" id="curPage"/> 
 	
 </body>
 </html>

@@ -22,6 +22,14 @@ body {
 	text-align : center;
 }
 
+#btn {
+	float : right;
+}
+
+#pagingNav{
+	text-align : center;
+}
+
 /* home 
 -------------------------------------------------- */
 #home {

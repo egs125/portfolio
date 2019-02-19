@@ -46,6 +46,17 @@
          LIMIT #{firstNote}, #{lastNote} 
 	</select>
 	
+	<select id="getNoteDetail" parameterType="java.util.Map" resultMap="note">
+		/*HomeDao_getNoteDetail*/
+	    SELECT NOTE_NO
+              ,TITLE
+              ,CONTENTS
+              ,WRITER
+              ,PWD
+		  FROM portfolio.NOTE
+		 WHERE 1 = 1
+		   AND NOTE_NO = #{noteNo}         
+	</select>
   	
   	<insert id="insertGuestNote" parameterType="note">
 		<selectKey keyProperty="noteNo" resultType="string" order="BEFORE">
@@ -66,6 +77,15 @@
 		   ,SYSDATE()
 		)
 	</insert>
+	
+	<update id="updateGuestNote" parameterType="note">
+		/*HomeDao_updateGuestNote*/
+		UPDATE portfolio.NOTE
+		   SET TITLE    = #{title}
+		      ,CONTENTS = #{contents}
+		 WHERE 1 = 1
+		   AND NOTE_NO  = #{noteNo}
+	</update>
 	
 <!-- 
 

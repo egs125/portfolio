@@ -11,7 +11,7 @@
     	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
 
 	<!-- jQuery -->
-    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
@@ -46,7 +46,7 @@
 				<ul class="nav navbar-nav">
 					<li id="nav_home" class="active"><a href="home">HOME</a></li>
 					<li id="nav_profile"><a href="profile">PROFILE</a></li>
-            				<li id="nav_portfolio"><a href="portfolio">PORTFOLIO</a></li>
+            		<li id="nav_portfolio"><a href="portfolio">PORTFOLIO</a></li>
 					<li id="nav_practice"><a href="practice">PRACTICE</a></li>
 					<li id="nav_guests"><a href="guests">GUESTS</a></li>
 				</ul>

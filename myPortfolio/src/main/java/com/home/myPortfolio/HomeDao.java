@@ -1,6 +1,7 @@
 package com.home.myPortfolio;
 
 import java.util.ArrayList;
+import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,13 +27,19 @@ public class HomeDao extends AbstractDAO {
 		return sql.selectOne(NAMESPACE + "getTotalNoteCnt");
 	}
 
-	public int insertGuestNote(NoteVO note) {
-		return sql.insert(NAMESPACE + "insertGuestNote", note);
-	}
-
 	public ArrayList<NoteVO> getNoteList(PagingVO paging) {
 		return (ArrayList) sql.selectList(NAMESPACE + "getNoteList", paging);
 	}
 
-	
+	public NoteVO getNoteDetail(Map<String, String> param) {
+		return sql.selectOne(NAMESPACE + "getNoteDetail", param);
+	}
+
+	public int insertGuestNote(NoteVO note) {
+		return sql.insert(NAMESPACE + "insertGuestNote", note);
+	}
+
+	public int updateGuestNote(NoteVO note) {
+		return sql.update(NAMESPACE + "updateGuestNote", note);
+	}
 }

@@ -11,7 +11,7 @@
 	<title>Dorong's Portfolio</title>
 	
 	<!-- jQuery -->
-    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
@@ -31,33 +31,36 @@
 	<div class="container">
 		
 		<div class="jumbotron">
-			<h2 class="display-3">GUEST'S NOTE</h2>		
+			<h2 class="display-3">GUESTS</h2>	
+			<hr>
+			<h4>PLEASE LEAVE YOUR NOTE</h4>	
 		</div>
 
 		<div class="contents">
 		
 			<form id="noteForm">
+				<input type="text" id="inputNoteNo" name="noteNo" value="${note.noteNo}">
 				<div class="form-group">
 					<label for="inputTitle">TITLE</label>
-					<input type="text" class="form-control" id="inputTitle" name="title" placeholder="INSERT TITLE">
+					<input type="text" class="form-control" id="inputTitle" name="title" placeholder="INSERT TITLE" value="${note.title}">
 				</div>
 				
 				<div class="row">
 					<div class="form-group col-md-6">
 						<label for="inputWriter">WRITER</label>
-						<input type="text" class="form-control" id="inputWriter" name="writer" placeholder="INSERT WRITER">
+						<input type="text" class="form-control" id="inputWriter" name="writer" placeholder="INSERT WRITER" value="${note.writer}">
 					</div>
 					<div class="form-group col-md-6">
 						<label for="inputPwd">PASSWORD</label>
 						<input type="password" class="form-control" id="inputPwd" name="pwd" placeholder="INSERT PASSWORD">
+						<input type="text" id="confirmPwd" value="${note.pwd}">
 					</div>
 				</div>
 				
 				<div class="form-group">
 					<label for="textContents">CONTENTS</label>
-					<textarea class="form-control" id="textContents" name="contents" rows="7" placeholder="WRITE DOWN CONTENTS HERE"></textarea>
+					<textarea class="form-control" id="textContents" name="contents" rows="7" placeholder="WRITE DOWN CONTENTS HERE">${note.contents}</textarea>
 				</div>
-				
 				
 			</form>
 		
@@ -67,12 +70,12 @@
 				<button type="button" id="btnList" class="btn btn-default">List</button>
 			</div>
 					
+			<input type="text" id="mode" value="${mode}">
 		</div>
 		<!--//end of contents -->
 		
 	</div>
 	<!-- //end of container -->
 	
-	<jsp:include page="bottom.jsp" />
 </body>
 </html>

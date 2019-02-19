@@ -60,7 +60,7 @@ function getNoteList(page){
 			if(data.list.length > 0){
 				for(var i in data.list){
 					result += "<tr><td>" + data.list[i].noteNo + "</td>";
-					result += "<td><a href='readNote?noteNo=" + data.list[i].noteNo + "'>" + data.list[i].title + "</a></td>";
+					result += "<td><a href='readNoteDetail?noteNo=" + data.list[i].noteNo + "'>" + data.list[i].title + "</a></td>";
 					result += "<td>" + data.list[i].writer + "</td>";
 					result += "<td>" + data.list[i].updDt + "</td></tr>";
 				}

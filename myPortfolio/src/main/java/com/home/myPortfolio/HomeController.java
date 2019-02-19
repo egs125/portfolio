@@ -78,7 +78,20 @@ public class HomeController {
 	}
 	
 	@RequestMapping(value="/readNoteDetail")
-	public String getWriteGuestNoteView(Model model) {
+	public String getWriteGuestNoteView(@RequestParam Map<String, String> param,
+										Model model
+										) {
+		
+		String mode = "insert";
+		
+		if(param.get("noteNo") != null) {
+			mode = "update";
+			NoteVO note = homeSvc.getNoteDetail(param);
+			model.addAttribute("note", note);
+			model.addAttribute("curPage", param.get("curPage"));
+		}
+		
+		model.addAttribute("mode", mode);
 		return "noteDetail";
 	}
 	
@@ -94,6 +107,18 @@ public class HomeController {
 		if(insert > 0) result = "Saved";
 		else result = "Failed";
 	
+		return result;
+	}
+	
+	@RequestMapping(value="/updateGuestNote")
+	public @ResponseBody String updateGuestNote(NoteVO note) {
+		String result = "";
+		
+		int update = homeSvc.updateGuestNote(note); 
+		
+		if(update > 0) result = "Saved";
+		else result = "Failed";
+		
 		return result;
 	}
 }

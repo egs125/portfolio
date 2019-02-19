@@ -3,22 +3,24 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
 	
 	<title>Dorong's Portfolio</title>
 	
+	<!-- jQuery -->
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+	<!-- Bootstrap -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>	
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 	
 	<script src="/resources/js/common.js"></script>
 	<script src="/resources/js/guest.js"></script>
 	
-	<link rel="stylesheet" href="/resources/css/common.css">
-	
+	<link rel="stylesheet" href="/resources/css/layout.css">	
 </head>
 <body>
 
@@ -26,61 +28,42 @@
 		
 	<div class="container">
 		
-		<div class="jumbotron">
-			
-			<h2 class="display-3">GUESTS</h2>
-			
+		<div class="jumbotron">			
+			<h2 class="display-3">GUESTS</h2>		
 		</div>
 		
-		<div id="tablePanel" class="panel panel-default">
-			<table class="table">
-				<thead>
-					<tr id="head">
-						<th>#</th>
-						<th>Title</th>
-						<th>Writer</th>
-						<th>Date</th>
-					</tr>
-				</thead>
-				
-				<tbody>
-				</tbody>
-			</table>
+		<div class="contents">
 		
-		</div>
-		<br>
-		<!-- 
-		<div id="paging">
-			<nav>
+			<div id="tablePanel" class="panel panel-default">
+				<table class="table">
+					<thead>
+						<tr id="head">
+							<th>#</th>
+							<th>Title</th>
+							<th>Writer</th>
+							<th>Date</th>
+						</tr>
+					</thead>
+
+					<tbody>
+					</tbody>
+				</table>
+			</div>
+			<!--//end of tablePanel -->
+			
+			<nav id="pagingNav">
 				<ul class="pagination">
-					<li id="prevBtn" class="active"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
-					<li><a href="#"></a></li>
-					<li><a href="#"></a></li>
-					<li><a href="#"></a></li>
-					<li><a href="#"></a></li>
-					<li><a href="#"></a></li>
-					<li id="nextBtn" class="active"><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+					<li id="prevBtn"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+					<li id="nextBtn" ><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
 				</ul>
 			</nav>
+			
+			<div id="btn">
+				<button id="toWrite" class="btn btn-default"><a href="readNoteDetail">Write</a></button>
+			</div>
+			
 		</div>
-		
-		 -->
-		<nav>
-		  	<ul class="pagination">
-			    <li id="prevBtn" class="active"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
-			    <!-- <li><a href="#"></a></li>
-			    <li><a href="#"></a></li>
-			    <li><a href="#"></a></li>
-			    <li><a href="#"></a></li>
-			    <li><a href="#"></a></li> -->
-			    <li id="nextBtn" class="active"><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
-		  	</ul>
-		</nav>
-		
-		<div id="btn">
-			<button id="toWrite" class="btn btn-default"><a href="readNoteDetail">Write</a></button>
-		</div>
-		<br>
+		<!--//end of contents" -->
 		
 	</div>
 	<!-- //end of container -->

@@ -23,22 +23,7 @@
   
 	<script src="/resources/js/common.js"></script>
 	<link rel="stylesheet" href="/resources/css/layout.css">
-	
-	<script type="text/javascript">
-		
-		$(document).ready(function(){
-			/* 
-			$("li").on("click", function(){
-				
-				$("li").removeClass("active");
-				$(this).addClass("active");
-				var a = $(this).find("a").attr("href");
-				
-			});
-			 */
-		});
-	
-	</script>
+
 </head>
 <body>
 
@@ -59,11 +44,11 @@
 		
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="home">HOME</a></li>
-					<li><a href="profile">PROFILE</a></li>
-            				<li><a href="portfolio">PORTFOLIO</a></li>
-					<li><a href="practice">PRACTICE</a></li>
-					<li><a href="guests">GUESTS</a></li>
+					<li id="nav_home" class="active"><a href="home">HOME</a></li>
+					<li id="nav_profile"><a href="profile">PROFILE</a></li>
+            				<li id="nav_portfolio"><a href="portfolio">PORTFOLIO</a></li>
+					<li id="nav_practice"><a href="practice">PRACTICE</a></li>
+					<li id="nav_guests"><a href="guests">GUESTS</a></li>
 				</ul>
 			</div>
 		</div>

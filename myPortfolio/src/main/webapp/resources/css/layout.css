@@ -18,6 +18,10 @@ body {
 	height : auto;	
 }
 
+.marketing .row {
+	text-align : center;
+}
+
 /* home 
 -------------------------------------------------- */
 #home {

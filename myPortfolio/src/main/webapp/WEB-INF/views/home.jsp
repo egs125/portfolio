@@ -23,7 +23,7 @@
 	<link rel="stylesheet" href="/resources/css/layout.css">
 	
 </head>
-<body>
+<body id="home">
 
 	<jsp:include page="top.jsp" />
 	
@@ -35,5 +35,7 @@
 		<p class="lead">aim to create simple and powerful codes</p>
 	</div>
 	<!--//end of conatiner-->
+	
+	<jsp:include page="bottom.jsp" />
 </body>
 </html>

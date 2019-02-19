@@ -6,6 +6,31 @@ $(document).ready(function(){
 		var page = $(this).text().trim();
 		selectPage(page);
 	});
+	
+	$("tr").on("click", function(){
+		
+		alert("!!");
+		var f = document.createElement("form");
+		
+		var pageParam = document.createElement("input");
+		pageParam.setAttribute("type", "hidden");
+		pageParam.setAttribute("name", "curPage");
+		pageParam.setAttribute("value", $("#curPage").val());
+		
+		var noteNoParam = document.createElement("input");
+		noteNoParam.setAttribute("type", "hidden");
+		noteNoParam.setAttribute("name", "noteNo");
+		noteNoParam.setAttribute("value", "00004");
+		
+		f.appendChild(pageParam);
+		f.appendChild(noteNoParam);
+		
+		f.setAttribute("method", "POST");
+		f.setAttribute("action", "readNoteDetail");
+		document.body.appendChild(f);
+		f.submit();
+		
+	});
 
 });
 

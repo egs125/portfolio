@@ -81,7 +81,6 @@ public class HomeController {
 	public String getWriteGuestNoteView(@RequestParam Map<String, String> param,
 										Model model
 										) {
-		
 		String mode = "insert";
 		
 		if(param.get("noteNo") != null) {

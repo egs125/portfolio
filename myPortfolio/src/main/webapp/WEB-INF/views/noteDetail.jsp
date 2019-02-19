@@ -40,6 +40,7 @@
 		
 			<form id="noteForm">
 				<input type="text" id="inputNoteNo" name="noteNo" value="${note.noteNo}">
+				<input type="text" id="curPage" value="${curPage}">
 				<div class="form-group">
 					<label for="inputTitle">TITLE</label>
 					<input type="text" class="form-control" id="inputTitle" name="title" placeholder="INSERT TITLE" value="${note.title}">

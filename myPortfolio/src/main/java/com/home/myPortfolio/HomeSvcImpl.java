@@ -33,6 +33,11 @@ public class HomeSvcImpl implements HomeSvc{
 	}
 
 	@Override
+	public int checkNotePwd(NoteVO note){
+		return homeDao.checkNotePwd(note);
+	}
+	
+	@Override
 	public int updateGuestNote(NoteVO note) {
 		return homeDao.updateGuestNote(note);
 	}

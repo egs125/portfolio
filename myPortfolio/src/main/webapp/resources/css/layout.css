@@ -26,6 +26,18 @@ body {
 	float : right;
 }
 
+#btnGroup {
+	float : right;
+}
+
+#btnGroup ul {
+	list-style : none;
+}
+
+#btnGroup li {
+	display : inline-block;
+}
+
 #pagingNav{
 	text-align : center;
 }

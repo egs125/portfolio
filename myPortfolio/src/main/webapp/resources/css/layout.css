@@ -32,10 +32,21 @@ body {
 
 /* home 
 -------------------------------------------------- */
-#home {
-	background-image : url("/resources/img/david-rodrigo.jpg");
-	background-repeat: no-repeat;
-	background-size: auto;
+
+@media all and (max-width: 768px) { 
+	#home { 
+		background-image : url("shifaaz-shamoon-resize.jpg");
+		background-size : 100% 100%;
+		background-repeat : no-repeat;
+	}
+}
+
+@media all and (min-width: 769px) { 
+	#home { 
+		background-image : url("shifaaz-shamoon-resize.jpg");
+		background-size : 100%;
+		background-repeat : no-repeat;
+	}
 }
 
 #home h1 {

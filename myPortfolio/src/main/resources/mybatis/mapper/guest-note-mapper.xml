@@ -77,6 +77,15 @@
 		   ,SYSDATE()
 		)
 	</insert>
+	  
+	<select id="checkNotePwd" resultType="java.lang.Integer">
+		/*HomeDao_getTotalNoteCnt*/
+		SELECT COUNT(*)
+		  FROM portfolio.NOTE
+	         WHERE 1 = 1
+		   AND NOTE_NO = #{noteNo}
+		   AND PWD = #{pwd}
+	</select>
 	
 	<update id="updateGuestNote" parameterType="note">
 		/*HomeDao_updateGuestNote*/
@@ -87,39 +96,4 @@
 		   AND NOTE_NO  = #{noteNo}
 	</update>
 	
-<!-- 
-
-	<select id="adminLogin" parameterType="appVoca" resultType="java.lang.String">
-
-	
-
-	</select>
-	
-	
-
-	
-	<select id="chkRegDomain" parameterType="java.lang.String" resultType="java.lang.Integer">
-		/*AppStdDao_chkRegDomain*/
-		SELECT COUNT(*)
-		  FROM APP_STD_DOMAIN
-		 WHERE 1=1
-		   AND "DOMAIN" = #{domain}
-	</select>
-
-	<insert id="saveNewDomain" parameterType="appDomain">
-		/*AppStdDao_saveNewDomain*/
-		INSERT INTO APP_STD_DOMAIN
-		VALUES
-		(
-			#{domain}
-		   ,#{dgName}
-		   ,#{iName}
-		   ,#{dType}
-		   ,#{dLength}
-		   ,#{dDef}
-		   ,#{dAppStts}
-		   ,NOW()
-		)
-	</insert>
-
- -->  </mapper>
+</mapper>

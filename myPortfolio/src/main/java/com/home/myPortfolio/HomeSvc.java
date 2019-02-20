@@ -13,10 +13,8 @@ public interface HomeSvc {
 	
 	int insertGuestNote(NoteVO note);
 
+	int checkNotePwd(NoteVO note);
+
 	int updateGuestNote(NoteVO note);
-
-	
-
-
 
 }

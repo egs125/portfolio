@@ -38,6 +38,10 @@ public class HomeDao extends AbstractDAO {
 	public int insertGuestNote(NoteVO note) {
 		return sql.insert(NAMESPACE + "insertGuestNote", note);
 	}
+	
+	public int checkNotePwd(NoteVO note){
+		return sql.selectOne(NAMESPACE + "checkNotePwd", note);
+	}
 
 	public int updateGuestNote(NoteVO note) {
 		return sql.update(NAMESPACE + "updateGuestNote", note);

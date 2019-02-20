@@ -42,12 +42,21 @@ body {
 	text-align : center;
 }
 
+input[readonly], textarea[readonly]{
+	pointer-events: none;
+}
+
+.table .addTr:hover {
+	background-color: #ADD8E6;
+	cursor: pointer;	
+}
+
 /* home 
 -------------------------------------------------- */
 
 @media all and (max-width: 768px) { 
 	#home { 
-		background-image : url("shifaaz-shamoon-resize.jpg");
+		background-image : url("/resources/img/shifaaz-shamoon-resize.jpg");
 		background-size : 100% 100%;
 		background-repeat : no-repeat;
 	}
@@ -55,7 +64,7 @@ body {
 
 @media all and (min-width: 769px) { 
 	#home { 
-		background-image : url("shifaaz-shamoon-resize.jpg");
+		background-image : url("/resources/img/shifaaz-shamoon-resize.jpg");
 		background-size : 100%;
 		background-repeat : no-repeat;
 	}

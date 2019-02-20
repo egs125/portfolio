@@ -2,14 +2,15 @@ $(document).ready(function(){
 	
 	initPage();
 	
-	$("li").on("click", function(e){
+	$(document).on("click", ".pagination li", function(e){
 		var page = $(this).text().trim();
 		selectPage(page);
 	});
-	
-	$("tr").on("click", function(){
+
+	$(document).on ("click", "td", function (event){
 		
-		alert("!!");
+		var noteNo = $(this).parent().find("td:eq(0)").text();
+		
 		var f = document.createElement("form");
 		
 		var pageParam = document.createElement("input");
@@ -20,7 +21,7 @@ $(document).ready(function(){
 		var noteNoParam = document.createElement("input");
 		noteNoParam.setAttribute("type", "hidden");
 		noteNoParam.setAttribute("name", "noteNo");
-		noteNoParam.setAttribute("value", "00004");
+		noteNoParam.setAttribute("value", noteNo);
 		
 		f.appendChild(pageParam);
 		f.appendChild(noteNoParam);
@@ -29,7 +30,6 @@ $(document).ready(function(){
 		f.setAttribute("action", "readNoteDetail");
 		document.body.appendChild(f);
 		f.submit();
-		
 	});
 
 });
@@ -84,8 +84,8 @@ function getNoteList(page){
 			
 			if(data.list.length > 0){
 				for(var i in data.list){
-					result += "<tr><td>" + data.list[i].noteNo + "</td>";
-					result += "<td><a href='readNoteDetail?noteNo=" + data.list[i].noteNo + "'>" + data.list[i].title + "</a></td>";
+					result += "<tr class='addTr'><td>" + data.list[i].noteNo + "</td>";
+					result += "<td>" + data.list[i].title + "</td>";
 					result += "<td>" + data.list[i].writer + "</td>";
 					result += "<td>" + data.list[i].updDt + "</td></tr>";
 				}

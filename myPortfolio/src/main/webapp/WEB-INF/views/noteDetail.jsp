@@ -67,7 +67,7 @@
 			<div id="btnGroup">
 				<ul>
 					<li><button type="button" id="btnSubmit" class="btn btn-primary" style="display:none">Save</button></li>
-					<li><<button type="button" id="btnModify" class="btn btn-primary" style="display:none">Modify</button>/li>	
+					<li><button type="button" id="btnModify" class="btn btn-primary" style="display:none">Modify</button></li>	
 					<li><button type="button" id="btnList" class="btn btn-default">List</button></li>
 				</ul>				
 			</div>

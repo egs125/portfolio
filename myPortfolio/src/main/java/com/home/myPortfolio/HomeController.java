@@ -110,8 +110,8 @@ public class HomeController {
 	}
 	
 	@RequestMapping(value="/updateGuestNote")
-	public @ResponseBody Map<String, String> updateGuestNote(NoteVO note) {
-		Map<String, String> result = new Map<String, String>();
+	public @ResponseBody String updateGuestNote(NoteVO note) {
+		String result = "";
 		
 		int update = 0;
 		
@@ -119,11 +119,10 @@ public class HomeController {
 		if(chk > 0) {
 			update = homeSvc.updateGuestNote(note); 
 		}else {
-			result.put("msg", "Incorrect Password");
+			result = "Incorrect Password";
 		}
 			
-		if(update > 0) result.put("result", "Saved!");
-		else result.put("result", "Failed");
+		if(update > 0) result = "Saved!";
 		
 		return result;
 	}

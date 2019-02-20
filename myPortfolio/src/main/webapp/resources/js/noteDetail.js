@@ -11,7 +11,7 @@ $(document).ready(function(){
 	});
 	
 	$("#btnList").on("click", function(){
-		moveToList();
+		history.back();
 	});
 })
 
@@ -78,8 +78,12 @@ function afterSave(){
 
 function updateNote(){
 	
-	if($("btnModify").text() == "Modify"){
+	if($("#btnModify").text() == "Modify"){
 		$("#btnModify").text("Save");
+		
+		$("#inputTitle").attr("readonly", false);
+		$("#inputPwd").attr("readonly", false);
+		$("#textContents").attr("readonly", false);	
 	}else{
 		var valid = noteValidation();
 		if(!valid.isValid){
@@ -101,12 +105,10 @@ function updateNote(){
 			dataType : "text",
 			success : function(data){ 
 				alert(data); 
-				if(data.result == "Success"){
-					afterUpdate();
-				}				
+				if(data == "Saved!") afterUpdate();
 			},
 			error : function(data){
-				alert(data); 
+				
 			}
 		});
 	}
@@ -138,3 +140,4 @@ function afterUpdate(){
 	$("#btnModify").text("Modify");
 	initPage();
 }
+

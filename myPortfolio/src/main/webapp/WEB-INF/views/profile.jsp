@@ -59,7 +59,7 @@
 				<li>Java / JSP</li>
 				<li>javascript / jQuery</li>
 				<li>ajax / JSON</li>
-				<li>HTML, CSS</li>
+				<li>HTML / CSS</li>
 				<li>MyBatis</li>
 				<li>Oracle 9i / tibero</li>
 				<li>Spring framework / eGov framework</li>

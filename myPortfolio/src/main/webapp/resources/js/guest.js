@@ -111,6 +111,8 @@ function getNoteList(page){
 
 function setPagingNav(paging){
 	
+	$(".pageBox").remove();
+	
 	var curPage = paging.curPage;
 	var curBlock = paging.curBlock;
 	var firstPage = paging.firstPage;
@@ -122,14 +124,13 @@ function setPagingNav(paging){
 	
 	for(var i = 1; i <= index; i++) {
 		
-		var pageBox =  '<li><a href="#">' + firstPage + '</a></li>';
+		var pageBox =  '<li class="pageBox"><a href="#">' + firstPage + '</a></li>';
 		$("#nextBtn").before(pageBox);
 		
 		if(firstPage == curPage){
-			$(".pagination li:eq(" + i + ")").attr("class", "active");
+			$(".pagination li:eq(" + i + ")").attr("class", "pageBox active");
 		}
 		++firstPage;
-		
 	}
 	
 	if(curBlock <= 1) $("#prevBtn").attr("class", "disabled");	

@@ -67,6 +67,8 @@ public class HomeController {
 		int page = Integer.valueOf((String) obj);
 		PagingVO paging = new PagingVO(totalCnt, page);
 		
+		paging.setLastNote(paging.getCurPage() * 10);
+		paging.setFirstNote(paging.getLastNote() - 10);
 		ArrayList<NoteVO> list = homeSvc.getNoteList(paging);
 		
 		Map<String, Object> result = new HashMap<String, Object>();

@@ -64,10 +64,12 @@
 				
 			</form>
 		
-			<div id="btn">
-				<button type="button" id="btnSubmit" class="btn btn-primary" style="display:none">Save</button>
-				<button type="button" id="btnModify" class="btn btn-primary" style="display:none">Modify</button>
-				<button type="button" id="btnList" class="btn btn-default">List</button>
+			<div id="btnGroup">
+				<ul>
+					<li><button type="button" id="btnSubmit" class="btn btn-primary" style="display:none">Save</button></li>
+					<li><<button type="button" id="btnModify" class="btn btn-primary" style="display:none">Modify</button>/li>	
+					<li><button type="button" id="btnList" class="btn btn-default">List</button></li>
+				</ul>				
 			</div>
 					
 			<input type="hidden" id="mode" value="${mode}">

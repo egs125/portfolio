@@ -39,8 +39,8 @@
 		<div class="contents">
 		
 			<form id="noteForm">
-				<input type="text" id="inputNoteNo" name="noteNo" value="${note.noteNo}">
-				<input type="text" id="curPage" value="${curPage}">
+				<input type="hidden" id="inputNoteNo" name="noteNo" value="${note.noteNo}">
+				<input type="hidden" id="curPage" value="${curPage}">
 				<div class="form-group">
 					<label for="inputTitle">TITLE</label>
 					<input type="text" class="form-control" id="inputTitle" name="title" placeholder="INSERT TITLE" value="${note.title}">
@@ -54,7 +54,6 @@
 					<div class="form-group col-md-6">
 						<label for="inputPwd">PASSWORD</label>
 						<input type="password" class="form-control" id="inputPwd" name="pwd" placeholder="INSERT PASSWORD">
-						<input type="text" id="confirmPwd" value="${note.pwd}">
 					</div>
 				</div>
 				
@@ -71,7 +70,7 @@
 				<button type="button" id="btnList" class="btn btn-default">List</button>
 			</div>
 					
-			<input type="text" id="mode" value="${mode}">
+			<input type="hidden" id="mode" value="${mode}">
 		</div>
 		<!--//end of contents -->
 		

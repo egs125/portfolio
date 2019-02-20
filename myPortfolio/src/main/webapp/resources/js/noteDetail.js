@@ -11,7 +11,7 @@ $(document).ready(function(){
 	});
 	
 	$("#btnList").on("click", function(){
-		location.href = "getNoteList";
+		moveToList();
 	});
 })
 
@@ -21,10 +21,16 @@ var mode;
 
 function initPage(){
 	mode = $("#mode").val();
+	
 	if(mode == "insert"){
+		$("form").find(":input").attr("readonly", false);
+		$("form").find(":input").val("");
+		
 		$("#btnSubmit").css("display", "block");
 		$("#btnModify").css("display", "none");
 	}else if(mode == "update"){
+		$("form").find(":input").attr("readonly", true);
+		
 		$("#btnSubmit").css("display", "none");
 		$("#btnModify").css("display", "block");	
 	}
@@ -71,31 +77,39 @@ function afterSave(){
 
 
 function updateNote(){
-	var valid = noteValidation();
-	if(!valid.isValid){
-		alert(valid.msg);
-		return false;
-	}	
 	
-	var param = {
-		noteNo : $("#inputNoteNo").val(),
-		title : $("#inputTitle").val(),	
-		contents : $("#textContents").val()	
-	};
-	
-	$.ajax({	
-		url			: "updateGuestNote",
-		type		: "POST",
-		data		: param,
-		dataType    : "text",
-		success     : function(data){ 
-			alert(data); 
-			afterUpdate();
-        },
-        error       : function(data){
-       	 	alert(data); 
-        }
-	});
+	if($("btnModify").text() == "Modify"){
+		$("#btnModify").text("Save");
+	}else{
+		var valid = noteValidation();
+		if(!valid.isValid){
+			alert(valid.msg);
+			return false;
+		}	
+
+		var param = {
+			noteNo : $("#inputNoteNo").val(),
+			pwd : $("#inputPwd").val(),
+			title : $("#inputTitle").val(),	
+			contents : $("#textContents").val()	
+		};
+
+		$.ajax({	
+			url	: "updateGuestNote",
+			type	: "POST",
+			data	: param,
+			dataType : "text",
+			success : function(data){ 
+				alert(data); 
+				if(data.result == "Success"){
+					afterUpdate();
+				}				
+			},
+			error : function(data){
+				alert(data); 
+			}
+		});
+	}
 }
 
 
@@ -108,11 +122,7 @@ function noteValidation(){
 		
 		
 	}else if(mode == "update"){
-		if($("#inputPwd").val() != $("#confirmPwd").val()) {
-			isValid = false;
-			msg =  "Incorrect password!";
-		}
-		
+				
 	}
 	
 	var result = { 
@@ -125,5 +135,6 @@ function noteValidation(){
 
 
 function afterUpdate(){
-	
+	$("#btnModify").text("Modify");
+	initPage();
 }

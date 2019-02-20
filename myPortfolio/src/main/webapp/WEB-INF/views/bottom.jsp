@@ -25,7 +25,7 @@
 	
 	<footer class="footer">
 		<div class="container">
-			<p class="text-muted">Photo by David Rodrigo on Unsplash</p>
+			<p class="text-muted">Photo by Shifaaz shamoon on Unsplash</p>
 		</div>
 	</footer>
 	

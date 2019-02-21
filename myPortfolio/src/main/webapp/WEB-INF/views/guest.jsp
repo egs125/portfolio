@@ -35,7 +35,7 @@
 		<div class="contents">
 		
 			<div id="loading">
-				<img src="loading.gif" />
+				<img src="loading.gif" style="display:none"/>
 			</div>
 			
 			<div id="tablePanel" class="panel panel-default">

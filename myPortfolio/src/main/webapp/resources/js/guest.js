@@ -74,9 +74,9 @@ function getNoteList(page){
 		type : "get",
 		data : param,
 		dataType : "json",
-		/*beforeSend : function(){
+		beforeSend : function(){
 			$("#loading img").css("display", "inline-block");
-		},*/ 
+		}, 
 		success : function(data){
 			console.log("getNoteList : success");
 			
@@ -89,7 +89,6 @@ function getNoteList(page){
 					result += "<td>" + data.list[i].writer + "</td>";
 					result += "<td>" + data.list[i].updDt + "</td></tr>";
 				}
-				
 				setPagingNav(data.paging);
 				
 			}else{
@@ -102,7 +101,7 @@ function getNoteList(page){
 			console.log("getNoteList :error");
 		},
 		complete : function(e){
-			/*$("#loading img").css("display", "none");*/
+			$("#loading img").css("display", "none");
 			//setPagingNav(page);
 		}		
 	});

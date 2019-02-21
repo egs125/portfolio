@@ -34,6 +34,10 @@
 		
 		<div class="contents">
 		
+			<div id="loading">
+				<img src="loading.gif" />
+			</div>
+			
 			<div id="tablePanel" class="panel panel-default">
 				<table class="table">
 					<thead>

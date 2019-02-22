@@ -6,9 +6,9 @@
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	<bean id="dataSourceSpied" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
 		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
-		<property name="url" value="jdbc:mysql://35.221.115.255:3306/portfolio"/>
-		<property name="username" value="root"/>
-		<property name="password" value="dorong"/>
+		<property name="url" value="jdbc:mysql://35.194.102.249:3306/portfolio"/>
+		<property name="username" value="userapp"/>
+		<property name="password" value="portfolio19"/>
 	</bean>	
 	
 	<bean id="dataSource" class="net.sf.log4jdbc.Log4jdbcProxyDataSource">

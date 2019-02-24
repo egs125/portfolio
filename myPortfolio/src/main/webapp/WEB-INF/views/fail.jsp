@@ -13,7 +13,7 @@
 	<link rel="icon" href="resources/img/favicon.ico">
 	
 	<!-- jQuery -->
-   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
@@ -21,19 +21,9 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 	
 	<script src="/resources/js/common.js"></script>
+	<script src="/resources/js/guest.js"></script>
 	
 	<link rel="stylesheet" href="/resources/css/layout.css">	
-	
-		
-	<script type="text/javascript">
-		
-		$(document).ready(function(){
-		
-			
-		});
-			
-	</script>
-	
 </head>
 <body>
 
@@ -42,19 +32,18 @@
 	<div class="container">
 		
 		<div class="jumbotron">			
-			<h2 class="display-3">PRACTICE</h2>		
+			<h2 class="display-3">Fail</h2>		
 		</div>
 		
 		<div class="contents">
-			
-			<h3>For exercise</h3>
-			
-			
+		
+			<h3>Somethins is wrong.....</h3>
 		</div>
 		<!--//end of contents" -->
 		
 	</div>
 	<!-- //end of container -->
+	
 	
 </body>
 </html>

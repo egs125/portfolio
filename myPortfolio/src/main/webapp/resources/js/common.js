@@ -7,4 +7,13 @@ $(document).ready(function(){
 		$("#nav_" + nav.toLowerCase()).addClass("active");
 	}
 	
+	$("#nav_logout").on("click", function(){
+		var choice = confirm("Are you sure to logout?");
+		if(choice){
+			location.href="userLogout";
+		}else{
+			return false;
+		}
+	});
+	
 });

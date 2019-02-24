@@ -5,9 +5,12 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
 	
 	<title>Dorong's Portfolio</title>
+	
+	<link rel="shortcut icon" href="/resources/img/favicon.ico">
+	<link rel="icon" href="resources/img/favicon.ico">
 	
 	<!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -83,8 +86,8 @@
 			<br> 
 			<h3>CURRENTLY STUDYING</h3>
 			<ul>
-				<li>UNIX SYSTEM</li>
-				<li>MOBILE APPLICATION DEVELOPING</li>
+				<li>node.js</li>
+				<li>React Native</li>
 			</ul>
 		</div>
 		<!--//end of contents -->

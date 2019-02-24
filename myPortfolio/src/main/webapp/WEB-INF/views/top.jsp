@@ -6,12 +6,9 @@
 
 	<title>Top navigation bar</title>
 	
-	<link rel="shortcut icon" href="/resources/img/favicon.ico">
-	<link rel="icon" href="resources/img/favicon.ico">
-	
-    	<meta charset="utf-8">
+    <meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
 
 	<!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -37,9 +34,9 @@
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 					<span class="sr-only">Toggle navigation</span>
-            				<span class="icon-bar"></span>
-            				<span class="icon-bar"></span>
-            				<span class="icon-bar"></span>
+            		<span class="icon-bar"></span>
+            		<span class="icon-bar"></span>
+            		<span class="icon-bar"></span>
 				</button>
 				<a class="navbar-brand" href="home"><ion-icon name="paw"></ion-icon>Dorong</a></a>
 			</div>
@@ -52,7 +49,16 @@
             		<li id="nav_portfolio"><a href="portfolio">PORTFOLIO</a></li>
 					<li id="nav_practice"><a href="practice">PRACTICE</a></li>
 					<li id="nav_guests"><a href="guests">GUESTS</a></li>
-				</ul>
+					
+					<c:choose>
+					<c:when test="${user ne null}">
+					<li id="nav_logout"><a href="#">LOG OUT</a></li>
+					</c:when>
+					<c:otherwise>
+					<li id="nav_login"><a href="login">LOG IN</a></li>
+					</c:otherwise>
+					</c:choose>
+				</ul>		
 			</div>
 		</div>
 		<!--//end of container -->

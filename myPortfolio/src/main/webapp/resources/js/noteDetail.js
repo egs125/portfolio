@@ -120,11 +120,25 @@ function noteValidation(){
 	var isValid = true;
 	var msg = "";
 	
+	var titleByte = byteCheck($("#inputTitle"));
+	var contentByte = byteCheck($("#textContents"));
+	
+	if(Number(titleByte) > 100){
+		isValid = false;
+		msg += "Title should be less than 100 characters\n";
+	}
+	
+	if(Number(contentByte) > 2000){
+		isValid = false;
+		msg += "Contents should be less than 2000 characters\n";
+	}
+	
 	if(mode == "insert"){
-		
-		
-	}else if(mode == "update"){
-				
+		var writerByte = byteCheck($("#inputWriter"));
+		if(Number(writerByte) > 100){
+			isValid = false;
+			msg += "Writer should be less than 100 characters\n";
+		}	
 	}
 	
 	var result = { 
@@ -139,5 +153,22 @@ function noteValidation(){
 function afterUpdate(){
 	$("#btnModify").text("Modify");
 	initPage();
+}
+
+function byteCheck(input){
+	
+	var byte = 0;
+	
+	for(var i = 0; i < input.val().length; i++){
+		var oneChar = escape(input.val().charAt(i));
+		if(oneChar.length == 1){
+			byte++;
+		}else if(oneChar.indexOf("%u") != -1){
+			byte += 2;
+		}else if(oneChar.indexOf("%") != -1){
+			byte++;
+		}
+	}
+	return byte;
 }
 
